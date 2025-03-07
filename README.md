@@ -44,18 +44,31 @@ At the end students will
 
 ### Week 2:
 
-17:30 - 18:00 introductions
+17:30 - 18:00 introduction to HPC and terminal
 
-18:00 - 18:30 introduction to bioinformatics and databases (UCSC Genome browser, biomart, oma, string and others from SIB)
+18:00 - 18:30 setting up the workspace for the genomics practice
 
 18:30 - 18:45 break
 
-18:45 - 19:30 introduction to genomics
+18:45 - 19:30 genomics practice 
 
 19:30 - 19:45 break
 
-19:45 - 20:30 preparations for the genomics practice session
+19:45 - 20:30 discussion of the results from the practice session
 
+### Week 2:
+
+17:30 - 18:00 introduction to HPC and terminal
+
+18:00 - 18:30 setting up the workspace for the genomics practice
+
+18:30 - 18:45 break
+
+18:45 - 19:30 genomics practice 
+
+19:30 - 19:45 break
+
+19:45 - 20:30 discussion of the results from the practice session
 
 
 
