@@ -28,7 +28,7 @@ At the end students will
 
 ## Content
 
-### Week 1:
+### Week 1: Introduction
 
 17:30 - 18:00 introductions
 
@@ -42,7 +42,7 @@ At the end students will
 
 19:45 - 20:30 preparations for the genomics practice session
 
-### Week 2:
+### Week 2: Genomics
 
 17:30 - 18:00 introduction to HPC and terminal
 
@@ -56,21 +56,29 @@ At the end students will
 
 19:45 - 20:30 discussion of the results from the practice session
 
-### Week 2:
+### Week 3: Transcriptomics (spatial & single-cell)
 
-17:30 - 18:00 introduction to HPC and terminal
-
-18:00 - 18:30 setting up the workspace for the genomics practice
+17:30 - 18:30 introduction to spatial and single cell transcriptomics
 
 18:30 - 18:45 break
 
-18:45 - 19:30 genomics practice 
+18:45 - 19:45 practice 
 
-19:30 - 19:45 break
+19:45 - 20:00 break
 
-19:45 - 20:30 discussion of the results from the practice session
+20:00 - 20:30 discussion of the results from the practice session
 
+### Week 3: Transcriptomics (spatial & single-cell)
 
+17:30 - 18:30 introduction to spatial and single cell transcriptomics
+
+18:30 - 18:45 break
+
+18:45 - 19:45 practice 
+
+19:45 - 20:00 break
+
+20:00 - 20:30 discussion of the results from the practice session
 
 
 14:00 - 16:00 practice on genomics 
