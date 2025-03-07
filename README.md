@@ -68,38 +68,30 @@ At the end students will
 
 20:00 - 20:30 discussion of the results from the practice session
 
-### Week 3: Transcriptomics (spatial & single-cell)
+### Week 4: Projects
 
-17:30 - 18:30 introduction to spatial and single cell transcriptomics
+17:30 - 18:30 Mutations and their study in omics
 
 18:30 - 18:45 break
 
-18:45 - 19:45 practice 
+18:45 - 19:15 project selection 
 
-19:45 - 20:00 break
+19:15 - 19:30 break
 
-20:00 - 20:30 discussion of the results from the practice session
+19:30 - 20:30 project work
 
+### Week 5: Project Presentations
 
-14:00 - 16:00 practice on genomics 
+17:30 - 18:00 last check with the project leaders
 
-16:00 - 16:30 coffee break
+18:00 - 19:00 project presentations
 
-16:30 - 17:00 project selection and meet up with project leaders
+19:00 - 19:15 break
 
-### Day 2:
+19:15 - 20:15 project presentations 
 
-09:00 - 09:30 Q&A, reflections
+20:15 - 20:30 wrap-up, feedback
 
-09:30 - 12:00 project work
-
-12:00 - 13:00 lunch break
-
-13:00 - 15:00 project work
-
-15:00 - 16:30 presentations
-
-16:30 - 17:00 wrap-up, conclusions, feedback
 
 ## Methodology
 
