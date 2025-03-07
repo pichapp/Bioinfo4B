@@ -1,6 +1,8 @@
 # Bioinformatics Course for Beginners
 
-Please follow the steps in the Preparation Page before the course starts.
+Please fill the questionnaire [here](https://forms.gle/PYmq6XzmxuVkjsLU6) as soon as possible. 
+
+Please follow the steps in the Preparation Page before the second week, when we start the hands-on practices.
 
 A five weeks course for students and other life scientists who are just starting with bioinformatics.
 
