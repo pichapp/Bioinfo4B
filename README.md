@@ -1,12 +1,16 @@
 # Bioinformatics Course for Beginners
 
+This is a five weeks course for students and other life scientists who are just starting with bioinformatics.
+
+Prerequisites for this course: Although not required, familiarity with python or a coding language is recommended. Participants should bring laptops with working terminals.
+
+## To-Do
+
 Please fill the questionnaire [here](https://forms.gle/PYmq6XzmxuVkjsLU6) as soon as possible. 
 
 Please follow the steps in the Preparation Page before the second week, when we start the hands-on practices.
 
-A five weeks course for students and other life scientists who are just starting with bioinformatics.
 
-Prerequisites for this course: Although not required, familiarity with python or a coding language is recommended. Participants should bring laptops.
 
 ## Objectives
 
