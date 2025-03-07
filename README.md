@@ -101,11 +101,4 @@ Exercises during the course: 50%
 Data challenge: 50%
 The course is taught in English. We’ll be working in bash. You may also use python, R etc. depending on the projects. No prior knowledge in coding is required although familiarity with a coding language will be helpful. Please bring laptops. If you have questions, feel free to email Tugce.
 
-## More details about the implementation
 
-There are two days of classes on the last two Fridays of May. Some preliminary reading and preparation materials are provided. First day includes theory introduction and hands-on exercises. The second day includes practical guided work on the group projects, discussions and final presentations.
-
-Copy the presentations from here:
-```
-cp /cfs/earth/scratch/icls/shared/bioinfo4beginners/'Practice Slides.pdf' .
-```
