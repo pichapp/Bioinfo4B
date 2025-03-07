@@ -2,7 +2,7 @@ Please follow these steps before the course starts. Write to us in case of any q
 
 We will be working in   [the High Performance Computing (HPC) Platform of ZHAW](https://wiki.hpc.zhaw.ch/hpcuserwiki/index.php/Welcome_to_the_HPC_User_Wiki). We will also call this platform the cluster or the server.
 
-To be able to work in the server, you need a ZHAW Account that allows you an access in the server. If you are not affiliated with ZHAW, you may either work locally or work together with someone who has a ZHAW account. If you were not aregistered at the Earth Cluster, we have set up a n account for you and sent you your HPC account credentials, please check your mail box to find them. In your first time, you will be asked to change your password as here: https://idm01.hpc.zhaw.ch/ipa/ui/
+To be able to work in the server, you need a ZHAW Account that allows you an access in the server. If you are not affiliated with ZHAW, you may either work locally or work together with someone who has a ZHAW account. If you were not registered at the Earth Cluster, we have set up an account for you and sent you your HPC account credentials, please check your mail box to find them. In your first time, you will be asked to change your password as here: https://idm01.hpc.zhaw.ch/ipa/ui/
 
 
 **To-do before the course:**
