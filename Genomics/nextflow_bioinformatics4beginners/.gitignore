@@ -1,0 +1,30 @@
+# Nextflow-specific files
+.nextflow/
+.nextflow.log*
+.nextflow.cache/
+.nextflow_history
+.nextflow_secret
+.nextflow_config
+work/
+results/
+.nf-tests/
+
+# Virtual Environments
+.venv/
+.env/
+
+# Docker and Singularity images
+singularity/
+*.img
+*.sif
+*.simg
+*.def
+*.d/
+.nextflow.container/
+
+# Editor & System Files
+.vscode/
+
+# Big files
+tests/input
+tests/results

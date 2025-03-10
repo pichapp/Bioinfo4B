@@ -4,7 +4,7 @@ FROM continuumio/miniconda3:latest
 # Set environment variables
 ENV PATH="/opt/conda/bin:$PATH" \
     DEBIAN_FRONTEND=noninteractive
-
+    
 # Install Mamba for faster package management
 RUN conda install -y -c conda-forge mamba && \
     mamba update -y conda && \
@@ -27,6 +27,7 @@ RUN conda install -y -c conda-forge mamba && \
         bowtie2 \
         bcftools \
         clustalo \
+        unzip \
         cnvkit && \
     conda clean -afy
 

@@ -1,0 +1,27 @@
+nextflow_process {
+
+    name "Test Process VARIANT_CALLING"
+    script "main_local.nf"
+    process "VARIANT_CALLING"
+
+    test("Should generate VCF and variant check files") {
+
+        when {
+            params{
+                outdir = "$projectDir/tests/results"
+            }
+            process {
+                """
+                input[0] = file("$projectDir/tests/input/alignment_sorted.bam")
+                input[1] = file("$projectDir/tests/input/chrM.fa")
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert file("${params.outdir}/calls.vcf").exists() : "Missing variant calls VCF file"
+            assert file("${params.outdir}/calls.vchk").exists() : "Missing variant check file"
+        }
+    }
+}

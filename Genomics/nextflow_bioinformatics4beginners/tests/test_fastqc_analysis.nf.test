@@ -1,0 +1,30 @@
+nextflow_process {
+
+    name "Test Process FASTQC_ANALYSIS"
+    script "main_local.nf"
+    process "FASTQC_ANALYSIS"
+
+    test("Should generate FastQC reports for all read files") {
+
+        when {
+            params{
+                outdir = "$projectDir/tests/results"
+            }
+            process {
+                """
+                input[0] = file("$projectDir/tests/input/reads.fastq")
+                input[1] = file("$projectDir/tests/input/reads_trimmed.fastq")
+                input[2] = file("$projectDir/tests/input/reads_filtered.fastq")
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            
+            assert file("$params.outdir/reads_fastqc.html").exists() : "Missing FastQC report for raw reads"
+            assert file("$params.outdir/reads_trimmed_fastqc.html").exists() : "Missing FastQC report for trimmed reads"
+            assert file("$params.outdir/reads_filtered_fastqc.html").exists() : "Missing FastQC report for filtered reads"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+nextflow_process {
+
+    name "Test Process ALIGNMENT"
+    script "main_local.nf"
+    process "ALIGNMENT"
+
+    test("Should generate sorted BAM and alignment text file") {
+
+        when {
+            params{
+                outdir = "$projectDir/tests/results"
+            }
+            process {
+                """
+                input[0] = file("$projectDir/tests/input/chrM.fa")
+                input[1] = file("$projectDir/tests/input/reads_filtered.fastq")
+                """
+            }
+        }
+
+        then {
+            assert process.success
+
+            assert file("$params.outdir/alignment_sorted.bam").exists() : "Missing sorted BAM file"
+            assert file("$params.outdir/alignment.txt").exists() : "Missing alignment text output"
+        }
+    }
+}

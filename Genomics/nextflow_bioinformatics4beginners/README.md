@@ -97,51 +97,79 @@ and activate it:
 conda activate env_nf
 ```
 
-#### **3. Run the Pipeline Locally**
+Here’s an improved **structured** version of your `README.md` **Run the Pipeline Locally** section, with better clarity, formatting, and readability.
 
-Navigate to the source directory and execute the pipeline:
+---
+
+## **3. Running the pipeline locally** 
+
+To execute the pipeline, navigate to the **source directory** and run:
 
 ```sh
-nextflow run main_local.nf -profile conda \
+nextflow run main.nf -profile conda \
     --input $(realpath input/reads.fastq)  \
     --reference $(realpath input/chrM.fa) \
     --outdir $(realpath results)
 ```
 
-Pipeline will first create new conda enviroment from `Env_Genomics.yml` and it could take around 10 minutes.
-After that it will execute in about 5 minutes. 
+### **Execution Steps**
+1. **Conda Environment Setup**  
+   - The pipeline will first create a **new Conda environment** from `Env_Genomics.yml`.  
+   - This step may take approximately **10 minutes**.  
 
-After execution, results will be stored in the `results/` directory.
+2. **Pipeline Execution**  
+   - After the environment is ready, the execution should take about **5 minutes**.  
+   - Results will be stored in the `results/` directory.  
 
-#### **4. Run the Pipeline with docker**
 
-If Conda fails, you can run it with any container, such as **Docker, Podman, or Singularity**. Just change the profile to `-profile docker`.  
-If your container software requires **root privileges**, then you will also need to run Nextflow with elevated privileges:  
+### **Running with a container**  
+If conda fails, you can run the pipeline using **containers** (e.g., docker, podman, or singularity).  
+
+Switch to the **docker profile** by running:
 
 ```sh
-nextflow run main_local.nf -profile docker \
+nextflow run main.nf -profile docker \
     --input $(realpath input/reads.fastq)  \
     --reference $(realpath input/chrM.fa) \
     --outdir $(realpath results)
 ```
 
-## Pipeline Details
+If your container runtime requires **root privileges**, you must execute nextflow with `sudo`:
 
-![Pipeline Diagram](img/mermaid-diagram-2025-02-13-145840.png)
+```sh
+sudo nextflow run main.nf -profile docker \
+    --input $(realpath input/reads.fastq)  \
+    --reference $(realpath input/chrM.fa) \
+    --outdir $(realpath results)
+```
 
-### Profiles
-Profiles describe the environment Nextflow will use to run processes, specified by the `-profile <conda>`. In this pipeline, `conda, docker, podman, singularity` profiles are supported.
 
-The conda environment is described with key word `conda` in each process in `main.nf`. It could be set in two ways:
-1. Using an existing conda environment. For example right now it set as:
-   ```
-   /cfs/earth/scratch/shared/bioinfo4beginners/Genomics/Env_Genomics
-   ```
-2. Using a `.yml` file to create a new environment or specifying a different conda path.
+## Pipeline details
 
-To modify the environment, update the conda path in `main.nf`.
+![Pipeline Diagram](img/mermaid-diagram-2025-03-10-194316.png)
 
-### Configuration Files
+### **Profiles**  
+
+Profiles define the **execution environment** for Nextflow and are specified using `-profile <profile_name>`.  This pipeline supports `conda`, `docker`, `podman`, `singularity`
+
+#### **Conda profile**  
+The **conda environment** is specified inside `nextflow.config` using `process.conda`:  
+
+1. **Default**  
+In `nextflow.config`, `process.conda` is set to:  
+```
+process.conda = "$projectDir/Env_Genomics.yml"
+```
+This creates a new Conda environment from `Env_Genomics.yml` when the pipeline runs.  
+
+2. **HPC execution**  
+In `slurm.config`, `process.conda` is set to:  
+```nextflow
+process.conda = "/cfs/earth/scratch/shared/bioinfo4beginners/Genomics/Env_Genomics"
+```
+On Earth cluster, an existing conda environment is already available, so the pipeline directly uses it without creating a new environment.  
+
+### Configuration files
 
 Each Nextflow pipeline has a default configuration file called `nextflow.config`. This file allows defining parameters to be used in `main.nf`.
 
@@ -174,7 +202,7 @@ nextflow run main.nf -profile conda -c slurm.config
 This allows different configurations to be applied without modifying the default `nextflow.config` file.
 
 
-### SLURM Configuration
+### SLURM configuration
 The `slurm.config` file is used to run Nextflow with SLURM. It:
 - Submits each process as a SLURM job
 - Defines resource limits (CPU, memory, partition, etc.)

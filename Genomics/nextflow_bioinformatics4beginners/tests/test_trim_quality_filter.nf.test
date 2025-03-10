@@ -1,0 +1,28 @@
+nextflow_process {
+
+    name "Test Process TRIM_QUALITY_FILTER"
+    script "main_local.nf"
+    process "TRIM_QUALITY_FILTER"
+
+    test("Should generate trimmed and filtered reads") {
+
+        when {
+            params{
+                outdir = "$projectDir/tests/results"
+            }
+            process {
+                """
+                input[0] = file("$projectDir/tests/input/reads.fastq")
+                """
+            }
+        }
+
+        then {
+            assert process.success
+
+
+            assert file("${params.outdir}/reads_trimmed.fastq").exists()  : "Missing trimmed reads"
+            assert file("${params.outdir}/reads_filtered.fastq").exists() : "Missing filtered reads"
+        }
+    }
+}

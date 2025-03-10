@@ -1,0 +1,26 @@
+nextflow_process {
+
+    name "Test Process VISUALIZATION"
+    script "main_local.nf"
+    process "VISUALIZATION"
+
+    test("Should generate depth CSV file") {
+
+        when {
+            params{
+                outdir = "$projectDir/tests/results"
+            }
+            process {
+                """
+                input[0] = file("$projectDir/tests/input/alignment_sorted.bam")
+                input[1] = file("$projectDir/tests/input/chrM.fa")
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert file("${params.outdir}/depth.csv").exists() : "Missing depth CSV file"
+        }
+    }
+}
