@@ -91,7 +91,7 @@ Then, when you're ready, navigate to your home folder on the cluster, download t
 
 ```bash
 cd ~
-curl -LO ... TODO: ADD LINK!
+curl -LO https://raw.githubusercontent.com/acg-team/Bioinfo4B/refs/heads/main/Project/single_cell/scripts/run_STARSolo.sh 
 sbatch ./run_STARSolo.sh
 ```
 
