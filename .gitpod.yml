@@ -1,6 +1,7 @@
 image: nfcore/gitpod:latest
 tasks:
   - name: Update Nextflow and setup pre-commit
+    init: pip install -r requirements.txt
     command: |
       pre-commit install --install-hooks
       nextflow self-update {%- if code_linters %}
@@ -15,3 +16,6 @@ vscode:
     - oderwat.indent-rainbow # Highlight indentation level
     - streetsidesoftware.code-spell-checker # Spelling checker for source code
     - ritwickdey.LiveServer # See html pages in VS
+    - ms-toolsai.jupyter # Jupyter Notebook for VS
+    - ms-python.python
+    
