@@ -3,7 +3,7 @@ set -eou pipefail
 
 if [ -z ${OUTPUTDIR+x} ]; then
 	>&2 echo "OUTPUTDIR was not set, defaulting to current directory '$(pwd)'";
-	OUTPUTDIR=${HOME};
+	OUTPUTDIR=$(pwd);
 fi
 >&2 echo "Output will be generated in '${OUTPUTDIR}'"
 
