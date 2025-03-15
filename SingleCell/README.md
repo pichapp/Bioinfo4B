@@ -83,7 +83,7 @@ If you want, you can read more about the STAR program and the inputs it required
 Note, however, that this is only required if you want to know more about STAR.
 For this task, the commands to run the program are provided in a script (see next section).
 
-#### Running STARSolo on the HC
+#### Running STARSolo on the HPC
 
 The commands to run STARSolo on the earth cluster are implemented in the script `run_STARSolo.sh`, which is located in the [scripts](./scripts/) directory on GitHub.
 Take some time to read through this script to get a rough idea of what a STARSolo alignment command looks like.
@@ -123,6 +123,51 @@ These files could now be loaded into Scanpy or Seurat to perform the workflow yo
 If you're interested, you can see if you can figure out how to do this.
 Although the results will not be very meaningful since we only analysed a small amount of data and one chromosome, it could still be a good exercise!
 
+#### Running STAR locally
+Installing STAR
+
+```bash
+mkdir -p single_cell_run/bin
+cd single_cell_run
+curl -LO https://github.com/alexdobin/STAR/releases/download/2.7.11b/STAR_2.7.11b.zip
+unzip STAR_2.7.11b.zip
+```
+
+The unzipped `STAR_2.7.11b` directory contains the following file structure:
+```bash
+├── Linux_x86_64
+│   ├── STAR
+│   └── STARlong
+├── Linux_x86_64_static
+│   ├── STAR
+│   └── STARlong
+└── MacOSX_x86_64
+    ├── README.md
+    ├── STAR
+    ├── STARlong
+    └── versions.log
+```
+
+Move the STAR program for your operating system to the `bin` folder we just created.
+So for MacOS: `mv STAR_2.7.11b/MacOSX_x86_64/STAR ./bin`. 
+If you're on Linux (or in WSL2 on Windows): `mv STAR_2.7.11b/Linux_x86_64_static/STAR ./bin`.
+
+Now, we need to download two scripts that were prepared for this single cell run:
+```bash
+curl -L https://github.com/acg-team/Bioinfo4B/blob/main/SingleCell/scripts/generate_STAR_index_local.sh?raw=true > generate_STAR_index_local.sh
+curl -L https://github.com/acg-team/Bioinfo4B/blob/main/SingleCell/scripts/run_STARSolo_local.sh?raw=true > run_STARSolo_local.sh
+```
+
+The first script will download some genomic reference information and builds a STAR index.
+Run it now:
+```bash
+bash ./generate_STAR_index_local.sh
+```
+
+After this script finishes (may be couple of minutes), run the second script, which performs the actual alignment:
+```bash
+bash run_STARSolo_local.sh
+```
 
 ## Appendix: Data and Software sources
 #### Generating a STAR index for chromosome 22

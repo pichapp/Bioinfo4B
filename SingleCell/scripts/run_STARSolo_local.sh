@@ -18,6 +18,9 @@ if [ -z ${NTHREADS+x} ]; then
 	NTHREADS=4;
 fi
 
+curl -L https://github.com/acg-team/Bioinfo4B/blob/main/SingleCell/data/STAR_data_archive.tar.gz?raw=true > ${STARDATADIR}/STAR_data_archive.tar.gz
+tar -xzvf ${STARDATADIR}/STAR_data_archive.tar.gz -C ${STARDATADIR}
+
 # Make a directory to store STAR output in
 mkdir ${OUTPUTDIR}/starsolo_out
 
