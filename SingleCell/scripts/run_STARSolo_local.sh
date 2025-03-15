@@ -2,7 +2,7 @@
 set -eou pipefail
 
 if [ -z ${OUTPUTDIR+x} ]; then
-	>&2 echo "OUTPUTDIR was not set, defaulting to home directory '${HOME}'";
+	>&2 echo "OUTPUTDIR was not set, defaulting to current directory '$(pwd)'";
 	OUTPUTDIR=${HOME};
 fi
 >&2 echo "Output will be generated in '${OUTPUTDIR}'"
@@ -22,7 +22,9 @@ curl -L https://github.com/acg-team/Bioinfo4B/blob/main/SingleCell/data/STAR_dat
 tar -xzvf ${STARDATADIR}/STAR_data_archive.tar.gz -C ${STARDATADIR}
 
 # Make a directory to store STAR output in
-mkdir ${OUTPUTDIR}/starsolo_out
+if [ ! -d ${OUTPUTDIR}/starsolo_out ]; then
+	mkdir ${OUTPUTDIR}/starsolo_out
+fi
 
 # Run STAR in STARSolo mode
 ${STARDATADIR}/bin/STAR \
