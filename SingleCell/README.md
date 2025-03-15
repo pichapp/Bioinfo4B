@@ -42,7 +42,7 @@ This tutorial uses a different dataset, but this should not matter for your unde
 
 ### TASK 2: Run STARSolo to generate a gene expression count matrix
 On the earth cluster, there is a shared folder for the Bioinfo4B course.
-Connect to the cluster, and navigate to this folder (`cd /cfs/earch/scratch/shared/bioinfo4beginners/`).
+Connect to the cluster, and navigate to this folder (`cd /cfs/earth/scratch/shared/bioinfo4beginners/`).
 In this shared folder, there is a subdirectory called `single_cell`.
 Go there now (`cd single_cell`).
 This folder again contains several subdirectories with the following contents:
@@ -90,7 +90,7 @@ Take some time to read through this script to get a rough idea of what a STARSol
 Then, when you're ready, navigate to your home folder on the cluster, download the script, and submit it to the workload manager:
 
 ```bash
-cd ~
+cd $LSFM_CLUSTER_SCRATCH_USER_PATH
 curl -LO https://raw.githubusercontent.com/acg-team/Bioinfo4B/refs/heads/main/Project/single_cell/scripts/run_STARSolo.sh 
 sbatch ./run_STARSolo.sh
 ```
