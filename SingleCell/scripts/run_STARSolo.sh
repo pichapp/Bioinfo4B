@@ -38,7 +38,7 @@ ${STARDATADIR}/bin/STAR \
 	--genomeDir ${STARDATADIR}/genome_idx/ \
 	--readFilesCommand zcat \
 	--readFilesIn ${STARDATADIR}/reads/subset100k_pbmc_1k_v3_S1_L001_R2_001.fastq.gz \
-		      ${STARDATADIR}/reads/subset100k_pbmc_1k_v3_S1_L001_R1_001.fastq.gz \
+		          ${STARDATADIR}/reads/subset100k_pbmc_1k_v3_S1_L001_R1_001.fastq.gz \
 	--runThreadN ${SLURM_CPUS_PER_TASK} \
 	--outFileNamePrefix ./starsolo_out/1kpmbc_\
 	--soloType Droplet \
