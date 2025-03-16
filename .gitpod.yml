@@ -5,6 +5,8 @@ tasks:
     command: |
       pre-commit install --install-hooks
       nextflow self-update {%- if code_linters %}
+  - name: Start Jupyter
+    command: jupyter notebook --no-browser --port=8888 --ip=0.0.0.0
 
 vscode:
   extensions:
@@ -18,7 +20,4 @@ vscode:
     - ritwickdey.LiveServer # See html pages in VS
     - ms-toolsai.jupyter # Jupyter Notebook for VS
     - ms-python.python
-    
-tasks:
-  - name: Start Jupyter
-    command: jupyter notebook --no-browser --port=8888 --ip=0.0.0.0
+
