@@ -96,7 +96,7 @@ Then, when you're ready, navigate to your home folder on the cluster, download t
 
 ```bash
 cd $LSFM_CLUSTER_SCRATCH_USER_PATH
-curl -LO https://raw.githubusercontent.com/acg-team/Bioinfo4B/refs/heads/main/Project/single_cell/scripts/run_STARSolo.sh 
+curl -LO https://raw.githubusercontent.com/acg-team/Bioinfo4B/refs/heads/main/SingleCell/scripts/run_STARSolo.sh 
 sbatch ./run_STARSolo.sh
 ```
 
