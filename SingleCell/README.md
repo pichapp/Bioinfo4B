@@ -158,8 +158,8 @@ If you're on Linux (or in WSL2 on Windows): `mv STAR_2.7.11b/Linux_x86_64_static
 
 Now, we need to download two scripts that were prepared for this single cell run:
 ```bash
-curl -L https://github.com/acg-team/Bioinfo4B/blob/main/SingleCell/scripts/generate_STAR_index_local.sh?raw=true > generate_STAR_index_local.sh
-curl -L https://github.com/acg-team/Bioinfo4B/blob/main/SingleCell/scripts/run_STARSolo_local.sh?raw=true > run_STARSolo_local.sh
+curl -LO https://raw.githubusercontent.com/acg-team/Bioinfo4B/refs/heads/main/SingleCell/scripts/generate_STAR_index_local.sh
+curl -LO https://github.com/acg-team/Bioinfo4B/raw/refs/heads/main/SingleCell/scripts/run_STARSolo_local.sh
 ```
 
 The first script will download some genomic reference information and builds a STAR index.
