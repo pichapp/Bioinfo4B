@@ -18,8 +18,9 @@ if [ -z ${NTHREADS+x} ]; then
 	NTHREADS=4;
 fi
 
-curl -L https://github.com/acg-team/Bioinfo4B/blob/main/SingleCell/data/STAR_data_archive.tar.gz?raw=true > ${STARDATADIR}/STAR_data_archive.tar.gz
+curl -LO https://github.com/acg-team/Bioinfo4B/raw/refs/heads/main/SingleCell/data/STAR_data_archive.tar.gz
 tar -xzvf ${STARDATADIR}/STAR_data_archive.tar.gz -C ${STARDATADIR}
+gunzip ${STARDATADIR}/reads/*.fastq.gz
 
 # Make a directory to store STAR output in
 if [ ! -d ${OUTPUTDIR}/starsolo_out ]; then
@@ -29,9 +30,8 @@ fi
 # Run STAR in STARSolo mode
 ${STARDATADIR}/bin/STAR \
 	--genomeDir ${STARDATADIR}/genome_idx/ \
-	--readFilesCommand zcat \
-	--readFilesIn ${STARDATADIR}/reads/subset100k_pbmc_1k_v3_S1_L001_R2_001.fastq.gz \
-				  ${STARDATADIR}/reads/subset100k_pbmc_1k_v3_S1_L001_R1_001.fastq.gz \
+	--readFilesIn ${STARDATADIR}/reads/subset100k_pbmc_1k_v3_S1_L001_R2_001.fastq \
+				  ${STARDATADIR}/reads/subset100k_pbmc_1k_v3_S1_L001_R1_001.fastq \
 	--runThreadN ${NTHREADS} \
 	--outFileNamePrefix ${OUTPUTDIR}/starsolo_out/1kpmbc_ \
 	--soloType Droplet \

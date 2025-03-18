@@ -208,7 +208,7 @@ STAR \
 
 #### Whitelist of barcodes for STAR
 ```bash
-curl -L https://github.com/pachterlab/kite/blob/master/docs/3M-february-2018.txt.gz?raw=true > 3M-february-2018.txt.gz
+curl -LO https://github.com/pachterlab/kite/raw/refs/heads/master/docs/3M-february-2018.txt.gz
 gunzip 3M-february-2018.txt.gz
 ```
 #### Single-cell sequencing data
