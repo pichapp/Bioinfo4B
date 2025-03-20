@@ -33,17 +33,20 @@ Typical steps that most software will include are:
 - Dimensionality reduction (PCA, UMAP).
 - Clustering & cell type assignment.
 
-We suggest that you follow one of the two following tutorials, based on whether you prefer R or Python.
+We suggest that you follow the following tutorials. Second one adds the spatial data, have a look at it if there is time. 
 Please refer to the documentation of these tools directly for information on how to install them and get started.
-1) The [Guided Clustering Tutorial](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html#identification-of-highly-variable-features-feature-selection) by [Seurat](https://satijalab.org/seurat/), which uses R.
-In this tutorial, you will analyse a count matrix based on the PBMC-3K dataset you use in Task 1 (but the full set instead of a subset).
-2) The [Preprocessing and clustering](https://scverse-tutorials.readthedocs.io/en/latest/notebooks/basic-scrna-tutorial.html) tutorial by [Scanpy](https://scanpy.readthedocs.io/en/stable/index.html), which uses Python.
-This tutorial uses a different dataset, but this should not matter for your understanding of the workflow.
+1) Seurat - Guided Clustering Tutorial. Please save the R script and the data in the same folder and start following the instructions in an R platform of your choice. Note that M1 M2 Macs do not work with the R package Seurat.  
+The guide is adapterd from the following tutorial, feel free to check it out: [Guided Clustering Tutorial](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html#identification-of-highly-variable-features-feature-selection) .
+In this tutorial, you will analyse a count matrix based on a dataset, which you will practice creating in the Task 2.
+2) Once you find the time or cal also be considered for a project: The [Analysis, visualization, and integration of spatial datasets with Seurat](https://satijalab.org/seurat/articles/spatial_vignette)
+
 
 ### TASK 2: Run STARSolo to generate a gene expression count matrix
 Now that you have been introduced to the basics of single cell analyses, let's have a look to see how single cell gene expression matrices are actually generated.
 In this part, we will use the STAR algnment program to map sequencing read to a reference genome.
 This alignment will be the basis for determining the expression levels of different transcripts in single cells.
+
+#### Running STARSolo on the HPC
 
 To get started, connect to the earth cluster.
 On the cluser, there is a shared folder for the Bioinfo4B course.
@@ -87,8 +90,6 @@ This is contained in the two `fastq` files stored in `reads`.
 If you want, you can read more about the STAR program and the inputs it required by checking [GitHub](https://github.com/alexdobin/STAR) or the [manual](https://physiology.med.cornell.edu/faculty/skrabanek/lab/angsd/lecture_notes/STARmanual.pdf) (especially 'Section 1.2 Basic workflow').
 Note, however, that this is only required if you want to know more about STAR.
 For this task, the commands to run the program are provided in a script (see next section).
-
-#### Running STARSolo on the HPC
 
 The commands to run STARSolo on the earth cluster are implemented in the script `run_STARSolo.sh`, which is located in the [scripts](./scripts/) directory on GitHub.
 Take some time to read through this script to get a rough idea of what a STARSolo alignment command looks like.
