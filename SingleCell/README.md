@@ -17,15 +17,15 @@ The resulting dataset now contains information on individual cells.
 
 ## Project overview
 The aim of this project is to introduce a basic workflow to analyse scRNAseq data.
-In the first part, you will align sequencing reads to the human reference genome using the STARSolo software.
+This workflow contains two stages and we will switch the order:  Normally, you first align sequencing reads to the human reference genome using the STARSolo software.
 This will result in a count matrix that record how many sequencing reads were mapped to each transcript (i.e., gene product) in the sample.
 This count matrix is the basis for downstream analysis in software specifically designed to analyse single cell sequencing gene expression data.
 There exist several software suites that perform this type of analyses, with some of the most widely used being Seurat (R) and ScanPy (Python). 
 There are already many excellent tutorials on analysing single-cell count matrices using these softwares, so we will provide links to some of these below.
-You can pick one of these to follow based on your programming language of preferences.
+We will first do the clustering analyses for single cell and spatial transcriptomics data and then have a look at the alignmemt process. 
 
 ## Tasks
-### TASK 1: Work through a tutorial on pre-processing and clustering a scRNAseq experiment
+### TASK 1: Single Cell and Spatial Transcriptomics Clustering
 There are many options available to us to perform a typical single-cell analysis workflow.
 Typical steps that most software will include are:
 - Removing low-quality cells (based on mitochondrial gene counts, number of detected genes, total number of detected molecules).
@@ -35,13 +35,13 @@ Typical steps that most software will include are:
 
 We suggest that you follow the following tutorials. Second one adds the spatial data, have a look at it if there is time. 
 Please refer to the documentation of these tools directly for information on how to install them and get started.
-1) Seurat - Guided Clustering Tutorial. Please save the R script and the data in the same folder and start following the instructions in an R platform of your choice. Note that M1 M2 Macs do not work with the R package Seurat.  
+1) Seurat - Guided Clustering Tutorial. Please save [this R script](https://github.com/acg-team/Bioinfo4B/blob/main/SingleCell/Single_Cell_RNA_Analysis.R) and the data in the same folder and start following the instructions in an R platform of your choice. Note that M1 M2 Macs do not work with the R package Seurat.  
 The guide is adapterd from the following tutorial, feel free to check it out: [Guided Clustering Tutorial](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html#identification-of-highly-variable-features-feature-selection) .
 In this tutorial, you will analyse a count matrix based on a dataset, which you will practice creating in the Task 2.
 2) Once you find the time or cal also be considered for a project: The [Analysis, visualization, and integration of spatial datasets with Seurat](https://satijalab.org/seurat/articles/spatial_vignette)
 
 
-### TASK 2: Run STARSolo to generate a gene expression count matrix
+### TASK 2: Align single cell reads to generate a gene expression count matrix
 Now that you have been introduced to the basics of single cell analyses, let's have a look to see how single cell gene expression matrices are actually generated.
 In this part, we will use the STAR algnment program to map sequencing read to a reference genome.
 This alignment will be the basis for determining the expression levels of different transcripts in single cells.
