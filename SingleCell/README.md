@@ -25,6 +25,9 @@ There are already many excellent tutorials on analysing single-cell count matric
 We will first do the clustering analyses for single cell and spatial transcriptomics data and then have a look at the alignmemt process. 
 
 ## Tasks
+
+Note that M1 M2 Macs do not work with the Bioconductor or any of the packages we work today.
+
 ### TASK 1: Single Cell and Spatial Transcriptomics Clustering
 There are many options available to us to perform a typical single-cell analysis workflow.
 Typical steps that most software will include are:
@@ -35,10 +38,10 @@ Typical steps that most software will include are:
 
 We suggest that you follow the following tutorials. Second one adds the spatial data, have a look at it if there is time. 
 Please refer to the documentation of these tools directly for information on how to install them and get started.
-1) Seurat - Guided Clustering Tutorial. Please save [this R script](https://github.com/acg-team/Bioinfo4B/blob/main/SingleCell/Single_Cell_RNA_Analysis.R) and the data in the same folder and start following the instructions in an R platform of your choice. Note that M1 M2 Macs do not work with the R package Seurat.  
+1) Seurat - Guided Clustering Tutorial. Please save [this R script](https://github.com/acg-team/Bioinfo4B/blob/main/SingleCell/Single_Cell_RNA_Analysis.R) and the data in the same folder and start following the instructions in an R platform of your choice. 
 The guide is adapterd from the following tutorial, feel free to check it out: [Guided Clustering Tutorial](https://satijalab.org/seurat/articles/pbmc3k_tutorial.html#identification-of-highly-variable-features-feature-selection) .
 In this tutorial, you will analyse a count matrix based on a dataset, which you will practice creating in the Task 2.
-2) Once you find the time or cal also be considered for a project: The [Analysis, visualization, and integration of spatial datasets with Seurat](https://satijalab.org/seurat/articles/spatial_vignette)
+2) Once done, integrate the spatial data to your workflow following the Spatial.Rmd file above. You knit the whole thing or run the commands one by one yourself. The tutorial is modified from the following page on [Analysis, visualization, and integration of spatial datasets with Seurat](https://satijalab.org/seurat/articles/spatial_vignette)
 
 
 ### TASK 2: Align single cell reads to generate a gene expression count matrix
