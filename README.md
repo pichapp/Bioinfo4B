@@ -68,11 +68,11 @@ At the end students will
 
 18:30 - 18:45 break
 
-18:45 - 19:45 practice 
+18:45 - 19:45 practice on the clustering with single cell and spatial data
 
 19:45 - 20:00 break
 
-20:00 - 20:30 discussion of the results from the practice session
+20:00 - 20:30 practice on alignment of single cell transcriptomics data
 
 ### Week 4: Projects
 
@@ -80,11 +80,11 @@ At the end students will
 
 18:30 - 18:45 break
 
-18:45 - 19:15 project selection 
+18:45 - 19:30 an introduction of possible downstream aanalyses on omics and project selection 
 
-19:15 - 19:30 break
+19:30 - 19:50 break
 
-19:30 - 20:30 project work
+19:50 - 20:30 first meeting with the project supervisors and start to the project work
 
 ### Week 5: Project Presentations
 
