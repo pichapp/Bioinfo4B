@@ -3,3 +3,6 @@
 [Nextflow lecture slides](https://docs.google.com/presentation/d/1M7EPdNla4kKHIy8v4cumXHS3EhB1cTnYUY5xdgurF24/edit?usp=sharing)
 
 [Link to the single cell und spatial transcriptomics lecture slides](https://drive.google.com/file/d/1HOt8zrGTO5kApst_skKm6iU4wXsvqTkQ/view?usp=sharing)
+
+
+[Link to the projects slides](https://drive.google.com/file/d/1H1iyjpLCXt6qe-hSdaKr1C6lq4kL2lzk/view?usp=sharing)
